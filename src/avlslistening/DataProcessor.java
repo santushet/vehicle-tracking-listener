@@ -45,10 +45,12 @@ public class DataProcessor extends Thread {
                 while (queue.qe.size() > 0) {
                     //System.out.println("Queue Size  " + queue.qe.size());
 
+                	System.out.println("before calling dbmanager.getstatus");
                     if (DBManager.getStatus()) {
+                    	System.out.println("insdie ");
                         String tempstring = queue.getData();//DataListener.queue.getData();
                        // tempstring = tempstring.replaceAll("^","");
-                       // System.out.println("String Received at start"+ tempstring);
+                        System.out.println("String Received at start"+ tempstring);
                         //Process Data
                         if (tempstring.contains("+++")) {
                             tempstring = tempstring.replaceAll("\\+++", "");
@@ -439,8 +441,9 @@ class DataProcesssorThread implements Runnable {
                 utcgmt = pstFormat.format(date);
                // System.out.println("Date for invalid packet "+utcgmt);
             }
-           
+            System.out.println("before insertpacket");
             if (gValid.equals("1")) {
+            	System.out.println("after insertpacket");
                 dp.InsertTMPacket( unitNo,lait,logit,dt,speed,heading,Integer.parseInt(ignition),Integer.parseInt(dinput1),Integer.parseInt(dinput2)
                         ,analog,gOdometer,pOdometer,Integer.parseInt(mainSupply),Integer.parseInt(gValid),Integer.parseInt(pStatus));
             } else {

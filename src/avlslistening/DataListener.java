@@ -185,8 +185,6 @@ public class DataListener extends Thread {
              SocketAddress clientAddress = udpserver.receive(this.readBuffer);
              System.out.println(readBuffer.toString());
 
-
-
              }
 
              }
