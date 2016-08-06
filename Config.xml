@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : Config.xml
+    Created on : September 20, 2013, 9:51 AM
+    Author     : sai
+    Description:
+        Purpose of the document follows.
+-->
+
+<ROOT>
+    <SETTING>
+		<!--<DRIVER>com.microsoft.sqlserver.jdbc.SQLServerDriver</DRIVER> --><!-- DB Connection Start-->
+        <DRIVER>org.postgresql.Driver</DRIVER>
+        <URL>jdbc:postgresql://</URL>
+        <DB_IP>182.73.236.115:5432</DB_IP>
+        <DB_NAME>FleetTelematics</DB_NAME>
+        <DB_USER>postgres</DB_USER>
+        <DB_PWD>track@123</DB_PWD><!-- DB Connection End-->
+        <DATA_IP>182.73.236.115</DATA_IP><!-- Data Url Start-->
+        <DATA_PORT>5050,3000</DATA_PORT>
+        <TIMEZONE>+05:30</TIMEZONE>
+        <MIN_CONNECTION>5</MIN_CONNECTION>
+        <MAX_CONNECTION>50</MAX_CONNECTION>
+        <COMPANY_NAME>Trinity</COMPANY_NAME>
+        <BUILD_DATE>20/09/2013</BUILD_DATE>
+        <VERSIONNO>1.0</VERSIONNO>
+        <ENABLE_DISPATCH>false</ENABLE_DISPATCH>
+    </SETTING>
+</ROOT>
