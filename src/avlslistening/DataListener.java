@@ -116,8 +116,9 @@ public class DataListener extends Thread {
             serverChannel.configureBlocking(false);
 
 //            InetSocketAddress isa = new InetSocketAddress(this.hostAddress, this.port);
-            InetSocketAddress isa = new InetSocketAddress("localhost", 1339);
+            InetSocketAddress isa = new InetSocketAddress("54.173.220.171", 1339);
 
+            
 
             serverChannel.socket().bind(isa);
             //serverSocket.bind(new InetSocketAddress(InetAddress.getByName(LocalSettings.getInstance().getServerSettings().getServerPublicIP()), port));
